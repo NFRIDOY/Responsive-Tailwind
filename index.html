@@ -45,13 +45,14 @@
         let isHidden = 0; // hidden
         let NavExpand = document.getElementById("NavExpand");
         let NavExpand0 = document.getElementById("NavExpand0");
+        let body = document;
         document.getElementById("expand").addEventListener("click", function () {
             if(isHidden == 0) {
                 // NavExpand.style.display = "block"; // visible
                 isHidden = 1; // state Negative
                 NavExpand0.style.display = "flex";
             }
-            else if(isHidden = 1) {
+            else if(isHidden = 1 || document.getElementsByTagName("body").style.width > 640) {
                 // NavExpand.style.display = "none"; // hidden
                 isHidden = 0; // state Positive
                 NavExpand0.style.display = "none";
