@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposive Tailwind CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-blue-50 sm:bg-red-100 md:bg-blue-100  lg:bg-blue-200 xl:bg-purple-100 2xl:bg-violet-100" >
+    <nav class="bg-yellow-400 text-white font-bold  flex h-[10vh] sm:bg-red-500 sm:mx-16 sm:h-[10vh] md:h-[10vh] md:bg-blue-500 lg:bg-blue-800 lg:mx-20 xl:bg-purple-800 2xl:bg-violet-800">
+        <div class="Logo m-1 flex items-center">
+            <span class="cursor-pointer font-black text-4xl sm:text-2xl md:text-3xl lg:text-4xl">
+                Orion
+            </span>
+        </div>
+        <ul
+            id="NavExpand" class="hidden text-black sm:text-white  md:text-white lg:text-white xl:text-white  2xl:text-white ms-auto space-x-1 text-xs sm:flex items-center justify-end sm:me-1 sm:text-sm md:me-2 md:space-x-3 md:text-sm lg:space-x-5 lg:text-lg lg:me-5 lg: xl:space-x-7 xl:me-7 2xl:space-x-11">
+            <li>Home</li>
+            <li class="cursor-pointer sm:px-1">Nebula</li>
+            <li class="cursor-pointer sm:px-1">Belt</li>
+            <li class="cursor-pointer sm:px-1">About</li>
+            <li class="cursor-pointer sm:px-1">Contact Us</li>
+            <li class="cursor-pointer sm:px-1 hidden md:block">Signup</li>
+            <li class="cursor-pointer sm:px-0 hidden md:block">Login</li>
+            <li class="cursor-pointer sm:px-0 block md:hidden">Signup/Login</li>
+        </ul>
+        <ul
+            id="NavExpand0" class="hidden text-black sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden ms-auto space-x-1 text-xs items-center justify-end sm:me-1 sm:text-sm md:me-2 md:space-x-3 md:text-sm lg:space-x-5 lg:text-lg lg:me-5 lg: xl:space-x-7 xl:me-7 2xl:space-x-11">
+            <li>Home</li>
+            <li class="cursor-pointer sm:px-1">Nebula</li>
+            <li class="cursor-pointer sm:px-1">Belt</li>
+            <li class="cursor-pointer sm:px-1">About</li>
+            <li class="cursor-pointer sm:px-1">Contact Us</li>
+            <li class="cursor-pointer sm:px-1 hidden md:block">Signup</li>
+            <li class="cursor-pointer sm:px-0 hidden md:block">Login</li>
+            <li class="cursor-pointer sm:px-0 block md:hidden">Signup/Login</li>
+        </ul>
+        <div id="expand" class="flex items-center justify-center text-6xl ms-auto me-2 sm:hidden">
+            <button>=</button>
+        </div>
+    </nav>
+    <script>
+        let isHidden = 0; // hidden
+        let NavExpand = document.getElementById("NavExpand");
+        let NavExpand0 = document.getElementById("NavExpand0");
+        document.getElementById("expand").addEventListener("click", function () {
+            if(isHidden == 0) {
+                // NavExpand.style.display = "block"; // visible
+                isHidden = 1; // state Negative
+                NavExpand0.style.display = "flex";
+            }
+            else if(isHidden = 1) {
+                // NavExpand.style.display = "none"; // hidden
+                isHidden = 0; // state Positive
+                NavExpand0.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

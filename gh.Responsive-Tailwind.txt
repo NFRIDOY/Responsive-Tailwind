@@ -1,0 +1,13 @@
+echo "# Responsive-Tailwind" >> README.md
+git init
+git add .
+git commit -m "Responsive-Tailwind"
+git branch -M main
+git remote add origin https://github.com/NFRIDOY/Responsive-Tailwind.git
+git push -u origin main
+
+----------------------------------
+
+git remote add origin https://github.com/NFRIDOY/Responsive-Tailwind.git
+git branch -M main
+git push -u origin main
